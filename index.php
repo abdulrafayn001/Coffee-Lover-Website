@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['name']))
+    {
+        header("Location: user.php" );
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,10 +34,10 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="signup.html">Sign Up</a>
+                        <a class="nav-link" href="signup.php">Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                        <a class="nav-link" href="login.php">Login</a>
                     </li>
                 </ul>
             </div>

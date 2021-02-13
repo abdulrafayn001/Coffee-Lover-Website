@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['name']))
+    {
+        header("Location: user.php" );
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,13 +30,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                        <a class="nav-link" href="login.php">Login</a>
                     </li>
                 </ul>
             </div>
@@ -46,29 +53,29 @@
 
 
 <div class="container form">
-    <form class="form-horizontal">
+    <form class="form-horizontal" action="register.php" method="POST">
         <div class="form-group">
             <label for="inputName3" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-12">
-                <input type="text" class="form-control" id="inputName3" placeholder="Name" required>
+                <input type="text" name="name" class="form-control" id="inputName3" placeholder="Name" required>
             </div>
         </div>
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
             <div class="col-sm-12">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required>
+                <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email" required>
             </div>
         </div>
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
             <div class="col-sm-12">
-                <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required>
+                <input type="password" class="form-control" name="password" id="inputPassword3" placeholder="Password" required>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-outline-dark">Sign in</button>
+                <button type="submit" name="submit" class="btn btn-outline-dark">Sign in</button>
             </div>
         </div>
     </form>
