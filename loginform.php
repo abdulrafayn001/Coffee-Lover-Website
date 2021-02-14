@@ -2,7 +2,7 @@
     session_start();
     if(isset($_SESSION['name']))
     {
-        header("Location: user.php" );
+        header("Location: user.php");
     }
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Coffee</a>
+            <a class="navbar-brand" href="index.php">Coffee</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,10 +33,10 @@
                         <a class="nav-link" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
+                        <a class="nav-link" aria-current="page" href="signup.php">Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="loginform.php">Login</a>
+                        <a class="nav-link active" href="#">Login</a>
                     </li>
                 </ul>
             </div>
@@ -46,20 +46,14 @@
 
 <div class="container">
     <div class="jumbotron">
-        <h1>Sign Up</h1>
-        <p>Enter your detail bellow to register in to Coffee Lover</p>
+        <h1>Login</h1>
+        <p>Enter your detail bellow to login to Coffee Lover</p>
     </div>
 </div>
 
 
 <div class="container form">
-    <form class="form-horizontal" action="register.php" method="POST">
-        <div class="form-group">
-            <label for="inputName3" class="col-sm-2 control-label">Name</label>
-            <div class="col-sm-12">
-                <input type="text" name="name" class="form-control" id="inputName3" placeholder="Name" required>
-            </div>
-        </div>
+    <form class="form-horizontal" action="login.php" method="POST">
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
             <div class="col-sm-12">
@@ -75,7 +69,7 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" name="submit" class="btn btn-outline-dark">SIGN IN</button>
+                <button type="submit" name="submit" class="btn btn-outline-dark">LOGIN</button>
             </div>
         </div>
     </form>

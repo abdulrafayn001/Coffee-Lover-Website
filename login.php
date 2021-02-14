@@ -10,30 +10,22 @@
 
         if($con)
         {
-            $name=mysqli_real_escape_string($con,$_POST['name']);
             $email=mysqli_real_escape_string($con,$_POST['email']);
             $password=mysqli_real_escape_string($con,$_POST['password']);
 
-            $check="SELECT *from register where email='$email'";
+            $check="SELECT *from register where email='$email' and password='$password'";
             $checkRes=mysqli_query($con,$check);
-            
-            if(empty(mysqli_fetch_array($checkRes)))
-            {
-                $sql_query="INSERT into register (name,password,email) values ('$name','$password','$email')";
-                $inserted=mysqli_query($con,$sql_query);
+            $data=mysqli_fetch_array($checkRes);
 
-                if($inserted)
-                {
-                    header("location:login.php");
-                }
-                else
-                {
-                    header("location:index.php");
-                }
+            if(empty($data))
+            {
+                header('location: loginform.php');
             }
             else
             {
-                header("location:index.php");
+                session_start();
+                $_SESSION['name']=$data['name'];
+                header("location:user.php");
             }
         }
         else
