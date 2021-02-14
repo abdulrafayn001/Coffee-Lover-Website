@@ -42,45 +42,43 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Login</h1>
+            <p>Enter your detail bellow to login to Coffee Lover</p>
+        </div>
+    </div>
+
+
+    <div class="container form">
+        <form class="form-horizontal" action="login.php" method="POST">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-12">
+                    <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-12">
+                    <input type="password" class="form-control" name="password" id="inputPassword3" placeholder="Password" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" name="submit" class="btn btn-outline-dark">LOGIN</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright
+            <a class="nav-link text-dark" href="https://google.com/">coffee.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
-
-<div class="container">
-    <div class="jumbotron">
-        <h1>Login</h1>
-        <p>Enter your detail bellow to login to Coffee Lover</p>
-    </div>
-</div>
-
-
-<div class="container form">
-    <form class="form-horizontal" action="login.php" method="POST">
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-            <div class="col-sm-12">
-                <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-            <div class="col-sm-12">
-                <input type="password" class="form-control" name="password" id="inputPassword3" placeholder="Password" required>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" name="submit" class="btn btn-outline-dark">LOGIN</button>
-            </div>
-        </div>
-    </form>
-</div>
-<footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2021 Copyright
-        <a class="nav-link text-dark" href="https://google.com/">coffee.com</a>
-    </div>
-    <!-- Copyright -->
-</footer>
-
 </html>
