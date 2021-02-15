@@ -1,0 +1,15 @@
+.jumbotron {
+    margin-top: 8%;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+}
+
+footer {
+    margin-top: 7.2%;
+}
+
+button[type=submit] {
+    margin-top: 2rem;
+}
