@@ -25,6 +25,7 @@
             {
                 session_start();
                 $_SESSION['name']=$data['name'];
+                $_SESSION['id']=$data['id'];
                 header("location:user.php");
             }
         }
